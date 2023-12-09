@@ -17,7 +17,8 @@ function Header({ OpenSidebar }) {
         <div style={{ display: "flex", alignItems: "Center" }}>
           {" "}
           <BsSearch className="icon" />{" "}
-          <p style={{ fontSize: "15px" }}>Search Projects</p>
+          <input type="tel" name="" id="" placeholder="Search Projects" style={{border:"none" ,outline:"none"}} />
+          {/* <p style={{ fontSize: "15px" }}>Search Projects</p> */}
         </div>
       </div>
       <div

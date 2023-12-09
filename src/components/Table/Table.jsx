@@ -9,8 +9,7 @@ const Table = () => {
       email: "john@example.com",
       userType: "Admin",
       status: "Approved",
-          joined: "23 aug,2023 ",
-      
+      joined: "23 aug,2023 ",
     },
     {
       id: 2,
@@ -54,39 +53,39 @@ const Table = () => {
     },
   ];
 
-    return (
-      <div className="table-container">
-        <div className="table-responsive">
-          {/* <table className="table"> */}
-            {/* ... */}
-            <table className="table">
-              <thead>
-                <tr>
-                  <th>Name</th>
-                  <th>Email</th>
-                  <th>User Type</th>
-                  <th>Joined </th>
-                  <th> Status</th>
-                </tr>
-              </thead>
-              <tbody>
-                {data.map((row) => (
-                  <tr key={row.id}>
-                    <td>{row.name}</td>
-                    <td>{row.email}</td>
-                    <td>{row.userType}</td>
-                    <td>{row.joined}</td>
-                    <td>
-                      <span >{row.status}</span>{" "}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            {/* </table> */}
-          </table>
-        </div>
+  const renderTablecell = (row) => (
+    <tr key={row.id}>
+      <td>{row.name}</td>
+      <td>{row.email}</td>
+      <td>{row.userType}</td>
+      <td>{row.joined}</td>
+      <td>
+        <span>{row.status}</span>{" "}
+      </td>
+    </tr>
+  );
+
+  return (
+    <div className="table-container">
+      <div className="table-responsive">
+        {/* <table className="table"> */}
+        {/* ... */}
+        <table className="table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>User Type</th>
+              <th>Joined </th>
+              <th> Status</th>
+            </tr>
+          </thead>
+          <tbody>{data?.map(renderTablecell)}</tbody>
+          {/* </table> */}
+        </table>
       </div>
-    );
+    </div>
+  );
 };
 
 export default Table;

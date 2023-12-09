@@ -19,7 +19,8 @@ import {
   LineChart,
   Line,
 } from "recharts";
-import Table from "../Table";
+import Table from "../../components/Table/Table";
+import HighchartComponent from "../../components/HighchartComponent/HighChartsComponent";
 
 function Home() {
   const data = [
@@ -142,7 +143,7 @@ function Home() {
       </div>
 
       <div className="charts">
-        <ResponsiveContainer width="100%" height="100%">
+        {/* <ResponsiveContainer width="100%" height="100%">
           <BarChart
             width={500}
             height={300}
@@ -162,6 +163,7 @@ function Home() {
             <Bar dataKey="pv" fill="#8884d8" />
             <Bar dataKey="uv" fill="#82ca9d" />
           </BarChart>
+          
         </ResponsiveContainer>
 
         <ResponsiveContainer width="100%" height="100%">
@@ -189,11 +191,12 @@ function Home() {
             />
             <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
           </LineChart>
-        </ResponsiveContainer>
+        </ResponsiveContainer> */}
+        <HighchartComponent/>
       </div>
       <div style={{ marginTop: "20px" }}>
         {" "}
-        <Table />
+        <Table/>
       </div>
     </main>
   );
