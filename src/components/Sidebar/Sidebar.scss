@@ -1,0 +1,11 @@
+.sidebar-container {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  width: 250px;
+
+  .sidebar-logo-container {
+    display: flex;
+    justify-content: center;
+  }
+}
